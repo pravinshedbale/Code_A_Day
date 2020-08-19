@@ -15,7 +15,7 @@ int pop()
 {
 	if(top==-1)
 	{
-		return 0;
+		return -1;
 	}
 	else
 	{
@@ -29,10 +29,12 @@ void display()
 {
 	int i=0;
 	if(top!=-1)
+	{
 		for(i=top;i>=0;i--)
 		{
 			printf("%d\n",stack[i]);
 		}
+	}
 	else
 	{
 		printf("Stack Underflow...!\n");
@@ -67,7 +69,7 @@ void main()
 				}
 				break;
 			case 2:
-				if(pop()==0)
+				if(pop()==-1)
 				{
 					printf("underflow...!!\n");
 					printf("----------------------\n");	
